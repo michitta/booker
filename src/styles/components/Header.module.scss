@@ -1,0 +1,7 @@
+.header {
+    @apply flex w-full h-[58px] bg-bg-background-01 border-b border-label-03 items-center justify-center backdrop-blur-[25px] p-[12px] text-center;
+
+    > p {
+        @apply text-white font-bold text-[20px];
+    }
+}

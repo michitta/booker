@@ -1,0 +1,7 @@
+.footer {
+    @apply flex w-full h-[58px] border-t bg-bg-background-01 border-label-03 items-center justify-center backdrop-blur-[25px] p-[12px] text-center;
+
+    > p {
+        @apply text-label-03 font-semibold text-[14px];
+    }
+}

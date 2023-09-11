@@ -1,0 +1,120 @@
+.main {
+  @apply flex flex-col h-full;
+
+  > section {
+    &:first-child {
+      @apply flex flex-col p-[20px] justify-between gap-[20px];
+
+      > div {
+        @apply flex flex-col gap-[20px] text-center;
+
+        > h1 {
+          @apply font-extrabold text-[36px] text-white;
+        }
+
+        > p {
+          &:nth-child(2) {
+            @apply font-bold text-[16px] text-label-03;
+          }
+
+          &:last-child {
+            @apply font-bold text-[16px] text-label-02;
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      @apply flex bg-bg-background-01 w-full h-full backdrop-blur-[25px] border-t border-b border-label-03 p-[20px] flex-wrap justify-center gap-[10px];
+    }
+  }
+}
+
+.form {
+  @apply flex flex-col gap-[10px] h-fit items-center text-center;
+
+  > div {
+    @apply flex gap-[10px];
+
+    > select {
+      @apply w-fit p-[10px] bg-bg-background-01 rounded-[12px] backdrop-blur-[25px] border border-label-03 text-white;
+
+      &::placeholder {
+        @apply text-label-02;
+      }
+    }
+  }
+
+  > input {
+    @apply w-full p-[10px] h-[48px] bg-bg-background-01 rounded-[12px] backdrop-blur-[25px] border border-label-03 text-white;
+
+    &::placeholder {
+      @apply text-label-02;
+    }
+  }
+
+  > button {
+    @apply flex items-center p-[10px] h-fit w-fit bg-bg-background-01 rounded-[12px] backdrop-blur-[25px] border border-label-03 text-white;
+  }
+}
+
+.book {
+  @apply flex flex-col p-[14px] gap-[10px] backdrop-blur-[25px] border border-label-03 w-[228px] h-[388px] rounded-[12px] cursor-pointer;
+
+  &:hover {
+    @apply border-label-02 bg-bg-background-01;
+  }
+
+  > img {
+    @apply h-full w-full;
+  }
+
+  > span {
+    @apply flex flex-col gap-[6px];
+
+    > p {
+      &:first-child {
+        @apply text-label-02 font-bold text-[12px];
+      }
+
+      &:last-child {
+        @apply text-white font-extrabold text-[16px];
+      }
+    }
+  }
+
+  > p {
+    @apply text-label-03 font-bold text-[12px];
+  }
+}
+
+.button {
+  @apply bg-transparent flex flex-col p-[14px] items-center justify-center gap-[10px] backdrop-blur-[25px] border border-label-03 w-[228px] h-[388px] rounded-[12px] cursor-pointer text-white;
+
+  &:hover {
+    @apply border-label-02 bg-bg-background-01;
+  }
+}
+
+.spinner {
+  @apply w-4 h-4 rounded-full border-2 border-white border-b-transparent;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

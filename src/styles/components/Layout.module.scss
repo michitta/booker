@@ -1,0 +1,56 @@
+.layout {
+  @apply flex p-[40px] absolute w-full min-h-screen h-full bg-bg-background-01 items-center justify-center z-10 backdrop-blur-[40px];
+
+  > div {
+    @apply flex flex-col bg-bg-background-01 p-[20px] gap-[14px] border border-label-03 rounded-[12px] w-fit h-fit backdrop-blur-[25px] max-w-[1200px];
+  }
+}
+
+.header {
+  @apply flex justify-between;
+
+  > p {
+    @apply font-bold text-white;
+  }
+}
+
+.info {
+  @apply flex flex-col gap-[20px];
+
+  > section {
+
+    &:first-child {
+      > img {
+        @apply max-w-[228px] max-h-[388px];
+      }
+
+      > p {
+        @apply text-label-03;
+      }
+    }
+
+    &:last-child {
+      @apply flex flex-col gap-[6px] text-label-02 text-[14px];
+
+      > p {
+        @apply font-bold;
+
+        &:first-child {
+          @apply text-label-03;
+        }
+
+        &:nth-child(3) {
+          @apply text-white;
+        }
+
+        &:last-child {
+          @apply text-[12px] text-label-02;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  @apply flex items-center p-[10px] h-fit w-fit bg-bg-background-01 rounded-[12px] backdrop-blur-[25px] border border-label-03 text-white;
+}
